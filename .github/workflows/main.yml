@@ -34,4 +34,4 @@ jobs:
           ant -version
       - name: Check on failure
         if: steps.check.outcome == 'success'
-        run: echo "UnitTesting for the Build has been completed successfully
+        run: echo "UnitTesting for the Build has been completed successfully"
