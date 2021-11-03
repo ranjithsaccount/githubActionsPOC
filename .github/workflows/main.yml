@@ -33,5 +33,5 @@ jobs:
           gradle --version
           ant -version
       - name: Check on failures
-          if: steps.check.outcome == 'success'
-          run: echo "UnitTesting for the Build has been completed successfully
+        if: steps.check.outcome == 'success'
+        run: echo "UnitTesting for the Build has been completed successfully
