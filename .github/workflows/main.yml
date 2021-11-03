@@ -32,6 +32,11 @@ jobs:
           mvn --version
           gradle --version
           ant --version
-      - name: Check on failure
+      - name: Check on Success
         if: steps.check.outcome == 'success'
         run: echo "UnitTesting for the Build has been completed successfully"
+      - name: Check on Failure
+        if: steps.check.outcome == 'failure'
+        run: |
+          echo "UnitTesting for the Build has been failed"
+          exit 1
