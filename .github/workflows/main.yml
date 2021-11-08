@@ -38,7 +38,7 @@ jobs:
           echo "checking BuildToolsVersion"
           mvn --version
           gradle --version
-          ant --version
+          ant -version
         continue-on-error: true
       - name: Check on Success
         if: steps.check.outcome == 'success'
